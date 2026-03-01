@@ -138,7 +138,7 @@ export async function POST(request: Request) {
 
     if (!response.ok) {
       const error = await response.json()
-      console.error('[v0] OpenRouter API error:', error)
+      console.error('OpenRouter API error:', error)
 
       const errorMessage = error.error?.message || error.message || JSON.stringify(error)
       let userFriendlyError = errorMessage
@@ -161,9 +161,9 @@ export async function POST(request: Request) {
     try {
       data = await response.json()
     } catch (parseError) {
-      console.error('[v0] Failed to parse response as JSON:', parseError)
+      console.error('Failed to parse response as JSON:', parseError)
       const responseText = await response.text()
-      console.error('[v0] Response body:', responseText)
+      console.error('fResponse body:', responseText)
       return new Response(
         JSON.stringify({ error: 'Invalid response from OpenRouter API. Please check your API key and try again.' }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }
@@ -173,7 +173,7 @@ export async function POST(request: Request) {
     const letter = data.choices?.[0]?.message?.content || ''
 
     if (!letter) {
-      console.error('[v0] No content in response:', JSON.stringify(data))
+      console.error('No content in response:', JSON.stringify(data))
       throw new Error('No content in response from DeepSeek')
     }
 
@@ -182,7 +182,7 @@ export async function POST(request: Request) {
       headers: { 'Content-Type': 'application/json' },
     })
   } catch (error) {
-    console.error('[v0] Error generating cover letter:', error)
+    console.error('Error generating cover letter:', error)
     return new Response(
       JSON.stringify({ error: error instanceof Error ? error.message : 'Failed to generate cover letter' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }

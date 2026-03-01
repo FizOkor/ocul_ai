@@ -83,7 +83,7 @@ export default function CoverLetterForm({ onBack }: CoverLetterFormProps) {
       setGeneratedLetter(result.letter)
       setShowPreview(true)
     } catch (err) {
-      console.error('[v0] Generation error:', err)
+      console.error('Generation error:', err)
     } finally {
       setIsLoading(false)
     }

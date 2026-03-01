@@ -8,9 +8,8 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'CoverLetterAI - Create Professional Cover Letters',
+  title: 'Ocul AI - Create Professional Cover Letters',
   description: 'AI-powered cover letter generator. Create professional, personalized cover letters in minutes with our template-based builder.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
