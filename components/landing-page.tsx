@@ -12,7 +12,7 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 md:px-12">
-        <div className="text-2xl font-bold text-primary">CoverLetterAI</div>
+        <div className="text-2xl font-bold text-primary">OculAI</div>
         <nav className="hidden gap-8 md:flex">
           <a href="#features" className="text-foreground hover:text-primary transition-colors">
             Features
