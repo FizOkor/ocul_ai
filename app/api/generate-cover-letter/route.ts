@@ -15,7 +15,7 @@ interface RequestBody {
   useAI: boolean
 }
 
-// Build detailed, intelligent prompt for AI model
+// prompt for AI model
 function buildDetailedPrompt(data: RequestBody): string {
   const toneGuide = {
     professional: 'formal, polished, and corporate',
