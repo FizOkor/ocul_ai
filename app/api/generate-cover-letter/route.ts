@@ -124,7 +124,7 @@ export async function POST(request: Request) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'deepseek/deepseek-r1-0528:free',
+        model: 'deepseek/deepseek-v3.2',
         messages: [
           {
             role: 'user',
