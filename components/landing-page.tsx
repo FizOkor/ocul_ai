@@ -1,10 +1,11 @@
-'use client'
+"use client";
 
-import { Button } from '@/components/ui/button'
-import { ArrowRight } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import logo from "/ocul_icon.png";
 
 interface LandingPageProps {
-  onGetStarted: () => void
+  onGetStarted: () => void;
 }
 
 export default function LandingPage({ onGetStarted }: LandingPageProps) {
@@ -12,12 +13,28 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 md:px-12">
-        <div className="text-2xl font-bold text-primary">OculAI</div>
+        <div className="flex items-center gap-2 text-2xl font-bold text-primary">
+          <div className="relative h-8 w-8 flex-shrink-0">
+            <img
+              src={logo.src}
+              alt="OculAI Logo"
+              className="h-full w-full object-contain"
+            />
+          </div>
+          <span>OculAI</span>
+        </div>
+
         <nav className="hidden gap-8 md:flex">
-          <a href="#features" className="text-foreground hover:text-primary transition-colors">
+          <a
+            href="#features"
+            className="text-foreground hover:text-primary transition-colors"
+          >
             Features
           </a>
-          <a href="#templates" className="text-foreground hover:text-primary transition-colors">
+          <a
+            href="#templates"
+            className="text-foreground hover:text-primary transition-colors"
+          >
             Templates
           </a>
         </nav>
@@ -30,15 +47,13 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
             Create Professional Cover Letters in Minutes
           </h1>
           <p className="mb-8 text-lg text-muted-foreground">
-            AI-powered, template-based cover letter generation. Select your template, fill in your details, and let AI help you craft the perfect letter for any job application.
+            AI-powered, template-based cover letter generation. Select your
+            template, fill in your details, and let AI help you craft the
+            perfect letter for any job application.
           </p>
 
           <div className="flex flex-col gap-4 md:flex-row md:justify-center">
-            <Button
-              size="lg"
-              onClick={onGetStarted}
-              className="gap-2"
-            >
+            <Button size="lg" onClick={onGetStarted} className="gap-2">
               Build My Cover Letter
               <ArrowRight className="h-4 w-4" />
             </Button>
@@ -54,19 +69,25 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
           {/* Feature highlights */}
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             <div className="rounded-lg bg-card p-4">
-              <div className="mb-2 text-sm font-semibold text-primary">Fast & Easy</div>
+              <div className="mb-2 text-sm font-semibold text-primary">
+                Fast & Easy
+              </div>
               <p className="text-sm text-muted-foreground">
                 Complete your cover letter in just 5-10 minutes
               </p>
             </div>
             <div className="rounded-lg bg-card p-4">
-              <div className="mb-2 text-sm font-semibold text-primary">AI-Enhanced</div>
+              <div className="mb-2 text-sm font-semibold text-primary">
+                AI-Enhanced
+              </div>
               <p className="text-sm text-muted-foreground">
                 AI assistance to polish and improve your letter
               </p>
             </div>
             <div className="rounded-lg bg-card p-4">
-              <div className="mb-2 text-sm font-semibold text-primary">Multiple Templates</div>
+              <div className="mb-2 text-sm font-semibold text-primary">
+                Multiple Templates
+              </div>
               <p className="text-sm text-muted-foreground">
                 Choose from professional templates for any career stage
               </p>
@@ -75,5 +96,5 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
         </div>
       </main>
     </div>
-  )
+  );
 }
