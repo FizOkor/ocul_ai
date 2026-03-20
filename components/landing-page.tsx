@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import logo from "/ocul_icon.png";
 
 interface LandingPageProps {
@@ -15,10 +16,13 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
       <header className="flex items-center justify-between px-6 py-4 md:px-12">
         <div className="flex items-center gap-2 text-2xl font-bold text-primary">
           <div className="relative h-8 w-8 flex-shrink-0">
-            <img
-              src={logo.src}
+            <Image
+              src="/ocul_icon.png"
               alt="OculAI Logo"
-              className="h-full w-full object-contain"
+              width={32}
+              height={32}
+              fill
+              className="object-contain"
             />
           </div>
           <span>OculAI</span>
