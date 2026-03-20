@@ -124,15 +124,14 @@ export async function POST(request: Request) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'deepseek/deepseek-v3.2',
+        model: "xiaomi/mimo-v2-flash",
         messages: [
           {
             role: 'user',
             content: prompt,
           },
         ],
-        temperature: 0.8,
-        max_tokens: 1500,
+        "reasoning": {"enabled": true}
       }),
     })
 
